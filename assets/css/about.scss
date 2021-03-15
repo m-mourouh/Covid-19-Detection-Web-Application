@@ -1,0 +1,161 @@
+@import 'utilities' ;
+@import 'fonts' ;
+@import 'colors' ;
+@include loader ;
+@include scroll-bar(5px,linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)) ;
+body{
+    font-family: 'Poppins' , sans-serif;
+    scroll-behavior: smooth;
+    &:before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: url('../images/virus.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+        opacity: 0.2;
+    }
+}
+.container{
+    width: 100%;
+    height: 60px;
+    position: relative;
+            background: rgb(2,0,36);
+            background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            header {
+                padding: 10px 30px ;
+                nav {
+                    .menu {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .logo img{
+                            width: 35px;
+                            cursor: pointer;
+                        }
+                        .menu-items{
+                            display: flex;
+                            &{
+                                @include mQ(700px){
+                                // display: none;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                position: fixed;
+                                z-index: 100;
+                                top:0 ;
+                                right: -80%;
+                                width: 80% ;
+                                overflow: hidden;
+                                height:100% ;
+                                background: rgb(0, 50, 126);
+                                background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+                                // box-shadow: 0 0 6px rgba(0,0,0,16%);
+                                transition: 0.5s  ease-in-out;
+                            }
+                            }
+                            li{
+                                list-style: none;
+                                padding-left:20px;
+                                a {
+                                    text-decoration: none;
+                                    color: $white;
+                                }
+                               &:nth-child(5) a {
+                                   background: $white;
+                                   padding: 5px 20px;
+                                   color: $blue1;
+                                   border-radius: 20px;
+                                   transition: 0.25s ease-in-out;
+                                   &:hover {
+                                    color: $white;
+                                    background: dodgerblue;
+                                   }
+                               }
+                               @include mQ(700px) {
+                                   font-size: 1.2rem;
+                                   margin-top: 50px;}
+                            }
+        
+                        }
+                       
+                    }
+                    .bars .fas{
+                        display: none;
+                        font-size: 2.5rem;
+                        color: $white ;
+                         cursor: pointer;
+                         position: absolute;
+                         right: 20px;
+                         top: 10px;
+                        //  z-index: 100;
+                         @include mQ(700px){display: block;}
+                    }
+                }
+            }
+            main {
+                .about {
+                    width: 100%;
+                    .intro {
+                       width: 80%;
+                       margin: auto;
+                    }
+                }
+                h2{
+                    text-align: center;
+                    margin: 20px auto;
+                    color: $white;
+                    background: rgb(0, 50, 126);
+                    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+                    width: 80%;
+                    padding: 5px 20px;
+                    border-radius: 20px;
+                    font-family: 'Montserrat' , sans-serif;
+                    @include mQ(550px){
+                        font-size: 1rem;
+                    }
+                }
+               
+                .grid-container {  
+                    display: grid;
+                    padding: 20px;
+                    // justify-content: center;
+                    // align-items: center;
+                    grid-gap: 10px;
+                    
+                    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+                    .person{
+                        text-align: center;
+                        background: $white;
+                        box-shadow: 0 0 6px #ccc;
+                        border-radius: 10px;
+                        padding: 10px 0 0 0;
+                        overflow: hidden;
+                        p{
+                            font-size: 1.2rem;
+                            background:rgb(0, 153, 184) ;
+                            color: $white;
+                            width: 100%;
+                            padding: 5px;
+                        }
+                        img{
+                            text-align: center;
+                            width: 150px;
+                            height: 150px;
+                            clip-path: circle();
+                            // border: 5px solid rgb(231, 231, 231);
+                           
+                            border-radius: 50%;
+                          
+                        }
+                    }
+                }
+      
+            }
+}

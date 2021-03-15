@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détecter</title>
+    <link rel="stylesheet" href="../assets/css/detect.css">
+    <link rel="shortcut icon" href="..//assets/icons/microscope-solid.svg"  type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="../assets/js/detect.js" defer></script>
+</head>
+<body>
+    <div class="loader-container">
+        <div class="loader"><div></div><div></div></div>
+     </div>
+    <div class="container">
+        <header>
+            <nav>
+                <ul class="menu">
+                    <span class="logo"><a href="./index.html"><img src="../assets/icons/microscope-solid.svg" alt="logo"></a></span>
+                    <span class="menu-items">
+                        <li><a href="./index.html">Acceuil</a></li>
+                        <li><a href="./index.html#prevention">Prévention</a></li>
+                        <li><a href="https://news.google.com/topics/CAAqIggKIhxDQkFTRHdvSkwyMHZNREZqY0hsNUVnSm1jaWdBUAE?hl=fr&gl=FR&ceid=FR%3Afr">Actualités</a></li>
+                        <li><a href="./about.html">A propos</a></li>
+                        <li class="detect-btn1"><a href="./upload.html">Détecter <i class="fas fa-microscope"></i></a></li>
+                        <sapn class="bars"><i class='fas fa-bars'></i></sapn>
+                    </span>
+                </ul>
+                <sapn class="bars"><i class='fas fa-bars'></i></sapn>
+            </nav>
+        </header>
+        <main>
+            <!-- <h4>Veuillez sélectionner une image de la radiographie de thorax</h4> -->
+            <div class="upload">
+                <div class="image">
+                    <label for="file-upload_1">
+                    <img src="../assets/images/man_doctor.jpg" id="chest-image" alt="doctor">
+                </label>
+                </div>
+                <form action="/uploaded_chest" method="post" enctype="multipart/form-data">
+                      <label for="file-upload_1" id="label_1" class="custom-file-upload btn btn-primary">Sélectionner</label>
+                      <input type="file" name="file" id="file-upload_1" accept="image/*"  />
+                      <input type="submit" value="Télécharger " class="btn btn-success"/>
+                    </form>
+            </div>
+            <footer>
+                <p>Créé par Groupe 11 | LST IRM</p>
+                
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

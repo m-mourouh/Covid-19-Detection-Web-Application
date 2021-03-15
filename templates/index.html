@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/statistics.css">
+    <link rel="shortcut icon" href="..//assets/icons/microscope-solid.svg"  type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script>
+     <script src="http://www.geoplugin.net/javascript.gp" type="text/javascript" defer></script>
+    <script src="../assets/js/countries.js" defer></script>
+    <script src="../assets/js/statistics.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="../assets/js/app.js" defer></script>
+</head>
+<body>
+  <div class="loader-container">
+    <div class="loader"><div></div><div></div></div>
+</div>
+    <div class="container">
+        <section class="inner-container1">
+            <div class="background"></div>
+        <header>
+            <nav>
+                <ul class="menu">
+                    <span class="logo"><a href="./index.html"><img src="../assets/icons/microscope-solid.svg" alt="logo"></a></span>
+                    <span class="menu-items">
+                        <li><a href="./index.html">Acceuil</a></li>
+                        <li><a href="#prevention">Prévention</a></li>
+                        <li><a href="https://news.google.com/topics/CAAqIggKIhxDQkFTRHdvSkwyMHZNREZqY0hsNUVnSm1jaWdBUAE?hl=fr&gl=FR&ceid=FR%3Afr">Actualités</a></li>
+                        <li><a href="./about.html">A propos</a></li>
+                        <li class="detect-btn1"><a href="./upload.html">Détecter <i class="fas fa-microscope"></i></a></li>
+                        <sapn class="bars"><i class='fas fa-bars'></i></sapn>
+                    </span>
+                </ul>
+                <sapn class="bars"><i class='fas fa-bars'></i></sapn>
+            </nav>
+        </header>
+        <main class="main-1">
+                <div class="left-col">
+                    <h1 class="title">COVID-19 TEST EN LIGNE</h1>
+                    <div class="description">
+                        Cette nouvelle technique d'évaluation pourrait permettre aux médecins de prédire avec précision les résultats associée à COVID-19 à l'aide de l'apprentissage profond. 
+                    </div>
+                    <div><a href="./upload.html" class="detect-btn2">Détecter <i class="fas fa-viruses"></i></a></div>
+                </div>
+                <div class="right-col">
+                    <div class="img-bg"></div>
+                    <img src="../assets/images/women-doctor.png" alt="doctor">
+                </div>
+        </main>
+    </section>
+    <section class="inner-container2">
+        <div id="prevention">
+            <h1>Conseils de prévention</h1>
+            <h4>Choses que vous devriez faire</h4>
+        </div>
+       <div class="grid-container">
+       
+               <div class="col">
+                   <p class="txt">Lavez-vous les mains fréquemment</p>
+                   <img src="../assets/images/hand-washing.png" alt="hand-washing">
+                </div>
+               <div class="col">
+                <p class="txt">Évitez les poignées de main</p>
+                <img src="../assets/images/handshake.png" alt="handshake">
+            </div>
+               
+            <div class="col">
+                <p class="txt">Couvrez-vous la bouche en éternuant</p>
+                <img src="../assets/images/cough.png" alt="cough">
+            </div>
+            <div class="col">
+                <p class="txt">Portez un masque si vous devez sortir</p>
+                <img src="../assets/images/mask.png" alt="mask">
+            </div>
+
+       </div>
+        <div id="prevention">
+            <h4>Choses que vous ne devriez pas faire</h4>
+        </div>
+       <div class="grid-container">
+       
+               <div class="col">
+                   <p class="txt">Ne paniquez pas</p>
+                   <img src="../assets/images/panic.png" alt="panic">
+                </div>
+               <div class="col">
+                <p class="txt">Évitez de toucher votre visage</p>
+                <img src="../assets/images/protection.png" alt="protection">
+            </div>
+               
+            <div class="col">
+                <p class="txt">Ne vous réunissez pas en groupe</p>
+                <img src="../assets/images/no-group.png" alt="group">
+            </div>
+            <div class="col">
+                <p class="txt">Évitez les endroits bondés</p>
+                <img src="../assets/images/avoid-crowds.png" alt="avoid-crowds">
+            </div>
+
+       </div>
+       <div class="statistcs">
+           <h1>Statistiques COVID-19</h1>
+           <main>
+            <div class="stats">
+              <div class="latest-report">
+                <div class="country">
+                  <div class="name">Loading...</div>
+                  <div class="change-country">change</div>
+                  <div class="search-country hide">
+                    <div class="search-box">
+                      <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Search Country..."
+                      />
+                    </div>
+                    <div class="country-list"></div>
+                  </div>
+                </div>
+                <div class="total-cases">
+                  <div class="title">Total Cases</div>
+                  <div class="value">0</div>
+                  <div class="new-value">+0</div>
+                </div>
+                <div class="recovered">
+                  <div class="title">Recovered</div>
+                  <div class="value">0</div>
+                  <div class="new-value">+0</div>
+                </div>
+                <div class="deaths">
+                  <div class="title">Deaths</div>
+                  <div class="value">0</div>
+                  <div class="new-value">+0</div>
+                </div>
+              </div>
+              <div class="chart">
+                <canvas id="axes_line_chart"></canvas>
+              </div>
+            </div>
+          </main>
+       </div>
+       <footer>
+           <p>Créé par Groupe 11 | LST IRM</p>
+           
+       </footer>
+    </section>
+    </div>
+</body>
+</html>
