@@ -462,3 +462,14 @@ footer {
     padding: 50px 0 20px 0 ;
     /* box-shadow: -1px 0 6px #ccc ; */
 }
+a.link1 {
+    color: #fff;
+}
+
+span.footerBtn.footer-heart {
+    display: none;
+}
+
+img.emoji {
+    vertical-align: middle;
+}
