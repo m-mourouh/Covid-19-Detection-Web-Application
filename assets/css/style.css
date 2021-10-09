@@ -463,13 +463,13 @@ footer {
     /* box-shadow: -1px 0 6px #ccc ; */
 }
 a.link1 {
-    color: #fff;
+    color: #fff !important;
 }
 
 span.footerBtn.footer-heart {
-    display: none;
+    display: none !important;
 }
 
 img.emoji {
-    vertical-align: middle;
+    vertical-align: middle !important;
 }
